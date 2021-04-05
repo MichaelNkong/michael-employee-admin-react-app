@@ -7,7 +7,12 @@ class HeaderComponent extends Component {
      this.state ={
 
      }
+this.getEmployees=this.getEmployees.bind(this)  
+    }
 
+    getEmployees(){
+
+        this.props.history.push("/employees");
     }
     render() {
         return (
@@ -19,7 +24,7 @@ class HeaderComponent extends Component {
                     </div>
                     <div>
                         <ul className="Listunstyle"> 
-                            <li><a>Add Employee</a></li>
+                            <li><button onClick="{this.getEmployee}" className="btn btn-info">Add Employee</button></li>
 
 
                         </ul>
